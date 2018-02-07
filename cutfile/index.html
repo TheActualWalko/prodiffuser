@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica Neue', 'Helvetica', 'arial', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 15px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      #interface {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+      button, input {
+        border: none;
+        display: inline-block;
+        background-color: #fff;
+        border: 2px solid #ccc;
+        height: 40px;
+        width: 80px;
+        margin: 5px 5px 0 0;
+      }
+      button:focus {
+        outline: none;
+      }
+      button.active {
+        font-weight: 600;
+        background-color: #ccc;
+      }
+      button:hover {
+        background-color: #eee;
+        cursor: pointer;
+      }
+      button.active:hover {
+        background-color: #ccc;
+      }
+      #interface {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .row {
+        margin: 0 0 20px 0;
+        padding: 0 5px;
+        border-top: 2px solid black;
+      }
+      input {
+        width: 80px;
+        height: 100%;
+        padding: 5px;
+      }
+      #preview {
+        font-size: 0;
+        padding-top: 5px;
+        text-align: center;
+      }
+      #preview div {
+        font-size: 11px;
+        padding: 2px;
+        display: inline-block;
+        text-align: left;
+      }
+      #svg svg {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+      }
+      #svg svg:hover {
+        cursor: pointer;
+        background-color:#eee;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id='interface'>
+      <h1>The Prodiffuser Shop Tool</h1>
+      <div class='row'>
+        <label>Block Count:</label>
+        <div id='buttons'>
+
+        </div>
+      </div>
+      <div class='row'>
+        <label>Min Frequency (hz):</label>
+        <div>
+          <input id='minHz' type='number' min='10' max='2000' value='500'>
+        </div>
+      </div>
+      <div class='row'>
+        <label>Max Frequency (hz):</label>
+        <div>
+          <input id='maxHz' type='number' min='2000' max='40000' value='5000'>
+        </div>
+      </div>
+      <div class='row wide'>
+        <label>SVG:</label>
+        <div>
+          <button id='svg'>Download!</button>
+        </div>
+      </div>
+      <div class='row'>
+        <label>Depths in Millimetres:</label>
+        <div id='preview'></div>
+      </div>
+      <div class='row'>
+        <label>3D Preview:</label>
+        <div id='threedee'></div>
+      </div>
+    </div>
+    <script src='three.min.js'></script>
+    <script src='jquery.min.js'></script>
+    <script src='sequences.js'></script>
+    <script src='animation.js'></script>
+    <script src='cutfile.js'></script>
+  </body>
+</html>

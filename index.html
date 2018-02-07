@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      #opts {
+        position: fixed;
+        z-index: 2;
+        color: white;
+      }
+      #opts button:first-of-type {
+        margin-left: 20px;
+      }
+      #hz {
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='opts'>
+      <input id='hz' type='number' min='0.5' max='5'>
+      kHz
+    </div>
+    <script src='jquery.min.js'></script>
+    <script src='three.min.js'></script>
+    <script src='sequences.js'></script>
+    <script src='main.js'></script>
+  </body>
+</html>
